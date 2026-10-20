@@ -1,0 +1,283 @@
+
+/* 1. Basic page styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f6fc;
+    color: #243047;
+    line-height: 1.6;
+}
+
+/* 2. Header with gradient background */
+.hero {
+    padding: 48px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #3949ab, #008f95);
+    animation: fadeIn 0.8s ease-in;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+.hero p {
+    margin: 0;
+}
+
+/* 3. Navigation using Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+nav a {
+    padding: 8px 14px;
+    color: #3949ab;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.25s, color 0.25s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: white;
+    background: #3949ab;
+}
+
+/* 4. Main content */
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 28px auto;
+}
+
+.welcome {
+    margin-bottom: 22px;
+    padding: 22px;
+    background: #e5f7f5;
+    border-left: 5px solid #008f95;
+    border-radius: 12px;
+}
+
+.welcome h2,
+.welcome p {
+    margin-top: 0;
+}
+
+.welcome p {
+    margin-bottom: 0;
+}
+
+/* 5. Cards, shadows and borders */
+.card {
+    margin-bottom: 24px;
+    padding: 26px;
+    background: white;
+    border: 1px solid #e3e8f2;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(35, 48, 71, 0.06);
+    animation: fadeIn 0.6s ease-in;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #303f9f;
+}
+
+article {
+    padding: 16px;
+    background: #f7f9ff;
+    border-radius: 10px;
+}
+
+article a {
+    color: #3949ab;
+    font-weight: 600;
+}
+
+/* 6. Responsive table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e5e9f2;
+}
+
+thead {
+    color: white;
+    background: #3949ab;
+}
+
+tbody tr:hover {
+    background: #f0f4ff;
+}
+
+tfoot {
+    color: #526079;
+    font-size: 14px;
+    background: #f7f9fc;
+}
+
+/* 7. Form styling */
+form {
+    display: grid;
+    gap: 12px;
+}
+
+label,
+legend {
+    font-weight: 600;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    color: #243047;
+    background: white;
+    border: 1px solid #cbd3e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #008f95;
+    outline-offset: 2px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 14px;
+    border: 1px solid #cbd3e1;
+    border-radius: 8px;
+}
+
+.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+}
+
+button {
+    padding: 12px 18px;
+    color: white;
+    background: #3949ab;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+}
+
+button:hover {
+    background: #283593;
+    transform: translateY(-2px);
+}
+
+#form-message {
+    color: #00796b;
+    font-weight: 600;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* 8. Footer */
+footer {
+    padding: 22px;
+    color: white;
+    text-align: center;
+    background: #202b45;
+}
+
+/* 9. CSS animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 10. Mobile responsive design */
+@media (max-width: 600px) {
+    .hero {
+        padding: 32px 16px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+        margin: 16px auto;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    fieldset {
+        gap: 12px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

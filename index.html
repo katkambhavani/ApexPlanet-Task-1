@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple student task planner project">
+    <title>Student Task Planner | ApexPlanet Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero" id="home">
+        <h1>Student Task Planner</h1>
+        <p>Plan your day. Track your goals. Learn better.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#add-task">Add Task</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Welcome, Student!</h2>
+            <p>Organise your studies and make every day productive.</p>
+        </section>
+
+        <section id="tasks" class="card">
+            <h2>My Study Schedule</h2>
+            <p>Example schedule for demonstrating an HTML table.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Java Programming</td>
+                            <td>6:00 PM</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Aptitude Practice</td>
+                            <td>7:00 PM</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>HTML and CSS</td>
+                            <td>8:00 PM</td>
+                            <td>High</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Sample schedule for demonstration</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="add-task" class="card">
+            <h2>Add a Study Task</h2>
+
+            <form id="task-form">
+                <label for="task-name">Task name</label>
+                <input type="text" id="task-name" name="task-name"
+                       placeholder="e.g. Practise Java loops" required>
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option value="coding">Coding</option>
+                    <option value="aptitude">Aptitude</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="revision">Revision</option>
+                </select>
+
+                <fieldset>
+                    <legend>Priority</legend>
+                    <label class="choice">
+                        <input type="radio" name="priority" value="high" required>
+                        High
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="priority" value="medium">
+                        Medium
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="priority" value="low">
+                        Low
+                    </label>
+                </fieldset>
+
+                <label class="choice">
+                    <input type="checkbox" name="reminder" value="yes">
+                    I want to remember this task
+                </label>
+
+                <label for="notes">Additional notes</label>
+                <textarea id="notes" name="notes" rows="4"
+                          placeholder="Write your study notes here"></textarea>
+
+                <button type="submit">Add Task</button>
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="resources" class="card">
+            <h2>Learning Resources</h2>
+            <article>
+                <h3>HTML and CSS Basics</h3>
+                <p>Use this section to organise links and resources for learning web development.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                   target="_blank" rel="noopener noreferrer">Learn HTML on MDN</a>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Learning Video</h2>
+            <p>Add a suitable educational video here when you are ready.</p>
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE"
+                title="HTML tutorial"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Task Planner | ApexPlanet Internship Task 1</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("task-form");
+        const message = document.getElementById("form-message");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const taskName = document.getElementById("task-name").value.trim();
+
+            if (!taskName) {
+                message.textContent = "Please enter a task name.";
+                return;
+            }
+
+            message.textContent =
+                "Form demonstration successful! Task: " + taskName;
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>
