@@ -1,53 +1,47 @@
-# ApexPlanet Task 1 – Full Stack Web Development
+# My Personal Portfolio Website
 
-## About the Project
+Welcome to my personal portfolio website! This project is being developed as part of my **ApexPlanet Software Pvt. Ltd. Full Stack Web Development Internship — Task 1**.
 
-This repository contains Task 1 of my Full Stack Web Development Internship at ApexPlanet Software Pvt. Ltd.
+## About Me
 
-The project focuses on learning and implementing the fundamentals of web development using HTML, CSS, and related web technologies.
+I am a Computer Science Engineering student learning web development and building practical projects to improve my technical skills.
 
-## Objectives
+## Project Overview
 
-- Understand the structure of an HTML webpage.
-- Create and style webpage sections using HTML and CSS.
-- Work with multimedia elements such as audio and video.
-- Practice organizing project files and folders.
-- Learn Git and GitHub for version control and project sharing.
+This responsive portfolio website introduces me, highlights my skills and projects, and provides a contact form for visitors.
+
+## Features
+
+- Personal introduction and portfolio sections
+- Skills and projects showcase
+- Study schedule table and task form
+- Learning resources
+- HTML5 audio and video elements
+- Contact form with client-side validation
+- Responsive layout for desktop and mobile devices
+- CSS styling, animations, and interactive JavaScript
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (if used in the project)
-- Git and GitHub
-- PHP and MySQL (if implemented in the project)
+- **HTML5** — page structure, semantic elements, forms, and multimedia
+- **CSS3** — styling, layouts, animations, and responsive design
+- **JavaScript** — form validation and DOM interaction
+- **Git and GitHub** — version control and project hosting
 
-## Project Structure
+## How to Run the Project
 
-The repository contains the source files and resources used to build the website.
+1. Download or clone this repository.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
 
-- `index.html` – Main webpage (if applicable)
-- `style.css` – Stylesheet (if applicable)
-- `script.js` – JavaScript functionality (if applicable)
-- Other files – Multimedia resources and supporting project files
+## Project Status
 
-## How to Run
+This project is being developed as part of Task 1 of my internship. More improvements may be added as I continue learning.
 
-1. Clone or download this repository.
-2. Open the project folder in Visual Studio Code.
-3. Open `index.html` in a browser, or use the Live Server extension if installed.
-4. Follow any additional setup instructions for features that require PHP or MySQL.
+## Repository
 
-## Learning Outcomes
-
-This task helps me develop practical skills in frontend web development, multimedia integration, project organization, and version control.
-
-## Internship
-
-**Organization:** ApexPlanet Software Pvt. Ltd.  
-**Program:** Full Stack Web Development Internship  
-**Task:** Task 1
+[View this project on GitHub](https://github.com/katkambhavani/ApexPlanet-Task-1)
 
 ---
 
-This project is part of my learning journey in full stack web development.
+Created for the ApexPlanet Full Stack Web Development Internship.
