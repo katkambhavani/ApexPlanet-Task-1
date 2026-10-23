@@ -4,303 +4,492 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio showcasing my skills, projects, and web development learning journey.">
-    <title>My Portfolio | ApexPlanet Task 1</title>
+    <meta name="description" content="Personal portfolio showcasing my skills, education, projects, and learning journey in computer science.">
+    <title>My Portfolio | Computer Science Student</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero" id="home">
-    <h1>My Personal Portfolio</h1>
-    <p>Aspiring Web Developer | Learning, Creating, Growing</p>
-</header>
-<nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#tasks">Study Schedule</a>
-<a href="#add-task">Add a Task</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-    
-    </nav>
 
-    <main class="container">
-        
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm a Computer Science Engineering student
-                passionate about web development, technology, and creativity.
-            </p>
-            <p>
-                I'm currently building my skills in HTML, CSS, JavaScript,
-                and programming by creating practical projects.
-            </p>
-            <p>
-                My goal is to develop useful, user-friendly websites while
-                continuing to learn and explore new ideas.
-            </p>
-        </section>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="#home">portfolio<span>.</span></a>
 
-        <section id="skills" class="card">
-            <h2>My Skills</h2>
-            <p>Technologies and concepts I am learning and practising:</p>
+            <button class="menu-toggle" id="menuToggle"
+                type="button" aria-label="Open navigation"
+                aria-expanded="false" aria-controls="navLinks">
+                ☰
+            </button>
 
-            <ul>
-                <li>HTML5 — semantic elements, forms and multimedia</li>
-                <li>CSS3 — styling, Flexbox, animations and responsive design</li>
-                <li>JavaScript — DOM manipulation and form validation</li>
-                <li>Java — programming fundamentals and problem-solving</li>
-                <li>Git and GitHub — version control and project management</li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a class="nav-contact" href="#contact">Contact</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <section id="projects" class="card">
-            <h2>My Projects</h2>
-            <p>Here are some projects I am building to practise my development skills.</p>
+    <main>
+        <!-- Introduction -->
+        <section class="hero section-padding" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">
+                        COMPUTER SCIENCE STUDENT
+                    </p>
 
-            <article>
-                <h3>1. Student Task Planner</h3>
-                <p>
-                    A responsive website created as part of my ApexPlanet
-                    Full Stack Web Development Internship Task 1.
-                </p>
-                <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
-                <p><strong>Features:</strong> Study schedule table, task form,
-                    form validation, audio, video and responsive design.</p>
-            </article>
+                    <h1>Learning to build
+                        <span>useful digital experiences.</span>
+                    </h1>
 
-            <article>
-                <h3>2. Personal Portfolio Website</h3>
-                <p>
-                    An ongoing project to showcase my skills, learning journey,
-                    and development projects in one place.
-                </p>
-                <p><strong>Status:</strong> In progress</p>
-            </article>
-        </section>
+                    <p class="hero-description">
+                        Hello! I'm a computer science student exploring web
+                        development, programming, and database concepts.
+                        I enjoy turning ideas into practical projects and
+                        improving my skills by building and experimenting.
+                    </p>
 
-        <section id="contact" class="card">
-            <h2>Contact Me</h2>
-            <p>I'd love to connect about web development, projects, and learning opportunities.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">
+                            Explore my projects <span>↗</span>
+                        </a>
+                        <a class="button button-secondary" href="#contact">
+                            Get in touch
+                        </a>
+                    </div>
 
-            <form id="contact-form">
-                <label for="contact-name">Your Name</label>
-                <input
-                    type="text"
-                    id="contact-name"
-                    name="contact-name"
-                    placeholder="Enter your name"
-                    required
-                >
+                    <div class="hero-note">
+                        <span class="status-dot"></span>
+                        Open to learning opportunities and internships
+                    </div>
+                </div>
 
-                <label for="contact-email">Your Email</label>
-                <input
-                    type="email"
-                    id="contact-email"
-                    name="contact-email"
-                    placeholder="Enter your email"
-                    required
-                >
+                <div class="profile-card">
+                    <div class="profile-decoration decoration-one"></div>
+                    <div class="profile-decoration decoration-two"></div>
 
-                <label for="contact-message">Your Message</label>
-                <textarea
-                    id="contact-message"
-                    name="contact-message"
-                    rows="4"
-                    placeholder="Write your message"
-                    required
-                ></textarea>
+                    <!-- Replace profile.jpg with your photo filename later -->
+                    <div class="profile-placeholder" id="profilePlaceholder">
+                        <span class="profile-initials">ME</span>
+                        <span class="profile-photo-note">YOUR PHOTO</span>
+                    </div>
 
-                <button type="submit">Send Message</button>
-                <p id="contact-status" role="status" aria-live="polite"></p>
-            </form>
-        </section>
-
-        <section class="welcome">
-            <h2>Welcome, Student!</h2>
-            <p>Organise your studies and make every day productive.</p>
-        </section>
-
-        <section id="tasks" class="card">
-            <h2>My Study Schedule</h2>
-            <p>Example schedule for demonstrating an HTML table.</p>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Subject</th>
-                            <th scope="col">Time</th>
-                            <th scope="col">Priority</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Java Programming</td>
-                            <td>6:00 PM</td>
-                            <td>High</td>
-                        </tr>
-                        <tr>
-                            <td>Aptitude Practice</td>
-                            <td>7:00 PM</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>HTML and CSS</td>
-                            <td>8:00 PM</td>
-                            <td>High</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Sample schedule for demonstration</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                    <div class="profile-caption">
+                        <div>
+                            <strong>Curious mind.</strong>
+                            <p>Creative thinking · Continuous learning</p>
+                        </div>
+                        <span class="caption-icon">✳</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="add-task" class="card">
-            <h2>Add a Study Task</h2>
+        <!-- About -->
+        <section class="section-padding section-soft" id="about">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+                    <h2>Growing through<br>every project.</h2>
+                </div>
 
-            <form id="task-form">
-                <label for="task-name">Task name</label>
-                <input type="text" id="task-name" name="task-name"
-                       placeholder="e.g. Practise Java loops" required>
+                <div class="about-content">
+                    <p>
+                        I'm pursuing a B.Tech in Computer Science and
+                        Engineering. I'm developing my foundation in
+                        programming and web technologies while exploring
+                        how websites and applications work.
+                    </p>
+                    <p>
+                        I believe the best way to learn is to build,
+                        test, make mistakes, and improve. My portfolio
+                        is a record of that process — the ideas I explore,
+                        the skills I practise, and the projects I develop.
+                    </p>
 
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Choose a subject</option>
-                    <option value="coding">Coding</option>
-                    <option value="aptitude">Aptitude</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="revision">Revision</option>
-                </select>
-
-                <fieldset>
-                    <legend>Priority</legend>
-                    <label class="choice">
-                        <input type="radio" name="priority" value="high" required>
-                        High
-                    </label>
-                    <label class="choice">
-                        <input type="radio" name="priority" value="medium">
-                        Medium
-                    </label>
-                    <label class="choice">
-                        <input type="radio" name="priority" value="low">
-                        Low
-                    </label>
-                </fieldset>
-
-                <label class="choice">
-                    <input type="checkbox" name="reminder" value="yes">
-                    I want to remember this task
-                </label>
-
-                <label for="notes">Additional notes</label>
-                <textarea id="notes" name="notes" rows="4"
-                          placeholder="Write your study notes here"></textarea>
-
-                <button type="submit">Add Task</button>
-                <p id="form-message" role="status" aria-live="polite"></p>
-            </form>
+                    <div class="about-points">
+                        <div>
+                            <span class="point-number">01</span>
+                            <span>Learn by building</span>
+                        </div>
+                        <div>
+                            <span class="point-number">02</span>
+                            <span>Improve step by step</span>
+                        </div>
+                        <div>
+                            <span class="point-number">03</span>
+                            <span>Create with purpose</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="resources" class="card">
-            <h2>Learning Resources</h2>
-            <article>
-                <h3>HTML and CSS Basics</h3>
-                <p>Use this section to organise links and resources for learning web development.</p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                   target="_blank" rel="noopener noreferrer">Learn HTML on MDN</a>
-            </article>
+        <!-- Skills -->
+        <section class="section-padding" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">TOOLS & TECHNOLOGIES</p>
+                        <h2>Skills I'm developing.</h2>
+                    </div>
+                    <p class="section-intro">
+                        A growing toolkit that I strengthen through practice
+                        and projects.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-icon">01</span>
+                        <h3>HTML5</h3>
+                        <p>Page structure, semantic elements and forms</p>
+                        <span class="skill-level">Learning through projects</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">02</span>
+                        <h3>CSS3</h3>
+                        <p>Layouts, Flexbox, Grid and responsive styling</p>
+                        <span class="skill-level">Learning through projects</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">03</span>
+                        <h3>JavaScript</h3>
+                        <p>DOM manipulation, events and basic validation</p>
+                        <span class="skill-level">Developing fundamentals</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">04</span>
+                        <h3>Java</h3>
+                        <p>Programming fundamentals and problem-solving</p>
+                        <span class="skill-level">Developing fundamentals</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">05</span>
+                        <h3>Python</h3>
+                        <p>Programming concepts and practice</p>
+                        <span class="skill-level">Learning</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">06</span>
+                        <h3>SQL & Databases</h3>
+                        <p>Database concepts and querying fundamentals</p>
+                        <span class="skill-level">Learning</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">07</span>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control, commits and repositories</p>
+                        <span class="skill-level">Practising</span>
+                    </article>
+                </div>
+                <p class="small-note">
+                    Skill descriptions reflect my learning areas and will
+                    continue to grow with hands-on experience.
+                </p>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Learning Video</h2>
-            <p>Add a suitable educational video here when you are ready.</p>
-            <iframe
-                src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE"
-                title="HTML tutorial"
-                loading="lazy"
-                allowfullscreen>
-            </iframe>
+        <!-- Projects -->
+        <section class="section-padding section-soft" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">SELECTED WORK</p>
+                        <h2>Ideas becoming projects.</h2>
+                    </div>
+                    <p class="section-intro">
+                        A look at what I'm building and learning along the way.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-preview preview-planner"
+                            aria-label="Illustrative task planner dashboard preview">
+                            <div class="mock-window">
+                                <div class="mock-topbar">
+                                    <span></span><span></span><span></span>
+                                    <small>MY PLANNER</small>
+                                </div>
+                                <div class="mock-body">
+                                    <div class="mock-sidebar">
+                                        <i></i><i></i><i></i><i></i>
+                                    </div>
+                                    <div class="mock-dashboard">
+                                        <b>My dashboard</b>
+                                        <div class="mock-stats">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                        <div class="mock-line"></div>
+                                        <div class="mock-line short"></div>
+                                        <div class="mock-task"></div>
+                                        <div class="mock-task"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="preview-label">CONCEPT PREVIEW</span>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span>01 / WEB DEVELOPMENT</span>
+                                <span class="project-status">Example concept</span>
+                            </div>
+                            <h3>Student Task Planner</h3>
+                            <p>
+                                A concept for helping students organise daily
+                                tasks, track completion, and keep study plans
+                                in one place. This is a temporary example
+                                until my actual project details are added.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+                                <span class="text-link">Preview illustration only</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview preview-campus"
+                            aria-label="Illustrative campus community dashboard preview">
+                            <div class="campus-window">
+                                <div class="campus-top">
+                                    <span class="campus-logo">C.</span>
+                                    <span>Campus community</span>
+                                    <span class="campus-avatar">U</span>
+                                </div>
+                                <div class="campus-content">
+                                    <div class="campus-welcome">
+                                        <small>YOUR CAMPUS, CONNECTED</small>
+                                        <b>What's happening today?</b>
+                                    </div>
+                                    <div class="campus-categories">
+                                        <span>Learn</span>
+                                        <span>Projects</span>
+                                        <span>Help</span>
+                                    </div>
+                                    <div class="campus-post">
+                                        <i></i>
+                                        <div><b></b><span></span><span></span></div>
+                                    </div>
+                                    <div class="campus-post">
+                                        <i></i>
+                                        <div><b></b><span></span><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="preview-label">CONCEPT PREVIEW</span>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span>02 / WEB APPLICATION</span>
+                                <span class="project-status">Example concept</span>
+                            </div>
+                            <h3>Campus Community Platform</h3>
+                            <p>
+                                A concept for bringing campus updates,
+                                student projects, opportunities, and help
+                                requests together. This example will be
+                                replaced with a description of my real work.
+                            </p>
+
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Database concepts</span>
+                            </div>
+
+                            <div class="project-links">
+                                <span class="text-link">Preview illustration only</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="small-note">
+                    Project names and descriptions above are temporary examples.
+                    The dashboard visuals are illustrations, not screenshots
+                    of deployed applications. Real project links will be added
+                    when available.
+                </p>
+            </div>
         </section>
-        <section id="media" class="card">
-    <h2>HTML5 Audio and Video</h2>
 
-    <h3>Audio Example</h3>
-    <audio controls>
-        <source
-            src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
-            type="audio/mpeg">
-        Your browser does not support audio.
-    </audio>
+        <!-- Education -->
+      
+<!-- Education -->
+<section class="section-padding" id="education">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">ACADEMIC BACKGROUND</p>
+                <h2>Education.</h2>
+            </div>
+            <p class="section-intro">
+                My academic journey from secondary education
+                to computer science engineering.
+            </p>
+        </div>
 
-    <h3>Video Example</h3>
-    <video controls width="100%" style="max-width: 600px;">
-        <source
-            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-            type="video/mp4">
-        Your browser does not support video.
-    </video>
+        <div class="education-table-wrap">
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Specialisation</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>SSC</td>
+                        <td>MJPTBCWREIS</td>
+                        <td>Secondary School Education</td>
+                        <td>2021–2022</td>
+                        <td>
+                            <span class="education-status">Completed</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Diploma</td>
+                        <td>Jyothishmathi Institute of Technology and Science</td>
+                        <td>Computer Science and Engineering</td>
+                        <td>2022–2025</td>
+                        <td>
+                            <span class="education-status">Completed</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>B.Tech</td>
+                        <td>Vidya Jyothi Institute of Technology</td>
+                        <td>Computer Science and Engineering</td>
+                        <td>2025–2028</td>
+                        <td>
+                            <span class="education-status">In progress</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="small-note">
+            Education details and study periods as provided.
+        </p>
+    </div>
 </section>
+
+        <!-- Certificates -->
+        <section class="section-padding section-soft" id="certificates">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">LEARNING & DEVELOPMENT</p>
+                        <h2>Certificates.</h2>
+                    </div>
+                    <p class="section-intro">
+                        Courses and certificates that document my learning.
+                    </p>
+                </div>
+
+                <div class="certificate-empty">
+                    <div class="certificate-icon">✳</div>
+                    <div>
+                        <h3>My learning journey, in progress.</h3>
+                        <p>
+                            My verified certificates will appear here with
+                            their course names, issuing organisations, and
+                            dates. I will add each certificate after checking
+                            its details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">LET'S CONNECT</p>
+                    <h2>Have an opportunity<br>or idea in mind?</h2>
+                    <p class="contact-description">
+                        I'm happy to connect about projects, learning
+                        opportunities, internships, and collaboration.
+                    </p>
+
+                    <div class="contact-details">
+                        <!-- Replace # with your actual profile URLs -->
+                        <p><span>Email</span> Add your preferred email</p>
+                        <p><span>GitHub</span> Add your GitHub profile link</p>
+                        <p><span>LinkedIn</span> Add your LinkedIn profile link</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>Send a message</h3>
+                    <p class="form-note">
+                        This demo form validates your input but does not send
+                        or store messages.
+                    </p>
+
+                    <label for="contactName">Your name</label>
+                    <input id="contactName" name="name" type="text"
+                        placeholder="Enter your name" required>
+
+                    <label for="contactEmail">Email address</label>
+                    <input id="contactEmail" name="email" type="email"
+                        placeholder="you@example.com" required>
+
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" rows="4"
+                        placeholder="Write your message..." required></textarea>
+
+                    <button class="button button-primary" type="submit">
+                        Validate message <span>↗</span>
+                    </button>
+
+                    <p class="form-feedback" id="contactFeedback"
+                        aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>Student Task Planner | ApexPlanet Internship Task 1</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="logo" href="#home">portfolio<span>.</span></a>
+            <p>Built with curiosity, practice, and a willingness to learn.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span id="currentYear"></span> Personal Portfolio</p>
+            <p>Designed and developed as a learning project.</p>
+        </div>
     </footer>
 
-    <script>
-        const form = document.getElementById("task-form");
-        const message = document.getElementById("form-message");
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const taskName = document.getElementById("task-name").value.trim();
-
-            if (!taskName) {
-                message.textContent = "Please enter a task name.";
-                return;
-            }
-
-            message.textContent =
-                "Form demonstration successful! Task: " + taskName;
-
-            form.reset();
-        });
-        
-        const contactForm = document.getElementById("contact-form");
-        const contactStatus = document.getElementById("contact-status");
-
-        contactForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const contactName =
-                document.getElementById("contact-name").value.trim();
-
-            const contactEmail =
-                document.getElementById("contact-email").value.trim();
-
-            const contactMessage =
-                document.getElementById("contact-message").value.trim();
-
-            if (!contactName || !contactEmail || !contactMessage) {
-                contactStatus.textContent = "Please fill in all fields.";
-                return;
-            }
-
-            contactStatus.textContent =
-                "Thank you, " + contactName +
-                "! Your form demonstration was successful.";
-
-            contactForm.reset();
-        });
-
-    </script>
 </body>
 </html>
