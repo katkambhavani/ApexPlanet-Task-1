@@ -1,47 +1,47 @@
-# My Personal Portfolio Website
+# Personal Portfolio Website
 
-Welcome to my personal portfolio website! This project is being developed as part of my **ApexPlanet Software Pvt. Ltd. Full Stack Web Development Internship — Task 1**.
+A responsive personal portfolio website developed as part of my ApexPlanet Software Pvt. Ltd. Full Stack Web Development Internship - Task 1.
 
 ## About Me
 
-I am a Computer Science Engineering student learning web development and building practical projects to improve my technical skills.
+I am a Computer Science Engineering student learning web development and building practical projects to strengthen my technical skills.
 
 ## Project Overview
 
-This responsive portfolio website introduces me, highlights my skills and projects, and provides a contact form for visitors.
+This portfolio introduces me, showcases my technical skills and project concepts, presents my educational background and certifications, and provides a contact form with client-side validation.
 
 ## Features
 
-- Personal introduction and portfolio sections
-- Skills and projects showcase
-- Study schedule table and task form
-- Learning resources
-- HTML5 audio and video elements
-- Contact form with client-side validation
-- Responsive layout for desktop and mobile devices
-- CSS styling, animations, and interactive JavaScript
+- Personal introduction and profile photo
+- Technical skills showcase
+- Project concept previews
+- Education history
+- Certifications and training
+- Responsive layout for desktop and mobile screens
+- CSS styling, transitions, and interactive JavaScript
+- Semantic HTML structure
 
 ## Technologies Used
 
-- **HTML5** — page structure, semantic elements, forms, and multimedia
-- **CSS3** — styling, layouts, animations, and responsive design
-- **JavaScript** — form validation and DOM interaction
-- **Git and GitHub** — version control and project hosting
+- HTML5 - page structure and content
+- CSS3 - styling, layouts, transitions, and responsive design
+- JavaScript - navigation interactions, form validation, and DOM manipulation
+- Git and GitHub - version control and source code hosting
 
-## How to Run the Project
+## How to Run
 
-1. Download or clone this repository.
+1. Clone or download this repository.
 2. Open the project folder.
 3. Open `index.html` in a web browser.
 
-## Project Status
+## Notes
 
-This project is being developed as part of Task 1 of my internship. More improvements may be added as I continue learning.
+- The project previews are illustrative concepts, not screenshots of deployed applications.
+- The contact form validates input in the browser; it does not send or store messages.
+- Certificate images are included for reference.
 
 ## Repository
 
-[View this project on GitHub](https://github.com/katkambhavani/ApexPlanet-Task-1)
+https://github.com/katkambhavani/ApexPlanet-Task-1
 
----
-
-Created for the ApexPlanet Full Stack Web Development Internship.
+Created as part of the ApexPlanet Full Stack Web Development Internship.
