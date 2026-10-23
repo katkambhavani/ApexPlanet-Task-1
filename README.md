@@ -45,3 +45,11 @@ This portfolio introduces me, showcases my technical skills and project concepts
 https://github.com/katkambhavani/ApexPlanet-Task-1
 
 Created as part of the ApexPlanet Full Stack Web Development Internship.
+
+## Testing and Validation
+
+- Verified the portfolio in a web browser.
+- Checked responsive layouts using browser developer tools.
+- Tested contact form input validation.
+- Verified JavaScript syntax using `node --check script.js`.
+- Checked Git changes for whitespace errors before committing.
