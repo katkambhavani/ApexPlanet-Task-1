@@ -1490,3 +1490,90 @@ h3 {
     object-fit: contain;
     object-position: center;
 }
+/* About Me Section */
+#about {
+    padding: 80px 0;
+}
+
+#about .section-label {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#about h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+    color: #243047;
+    margin: 15px 0 25px;
+}
+
+#about p {
+    color: #526078;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* About Me Highlights */
+#about .about-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+#about .about-point {
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#about .about-point:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(36, 48, 71, 0.08);
+}
+
+#about .about-point span {
+    display: block;
+    color: #0d9488;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#about .about-point h3 {
+    font-size: 16px;
+    color: #243047;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #about {
+        padding: 55px 0;
+    }
+
+    #about .about-points {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+/* Match About section background with Projects and Certifications */
+#about {
+    background-color: var(--soft);
+}
+
+/* Keep About Me points consistent with the portfolio theme */
+#about .about-point {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+#about .about-point span {
+    color: var(--green);
+}

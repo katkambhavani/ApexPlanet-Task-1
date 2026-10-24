@@ -51,37 +51,49 @@ if (currentYear) {
    3. Contact form validation
 ============================== */
 
+
 const contactForm = document.getElementById("contactForm");
-const contactFeedback = document.getElementById("contactFeedback");
 
-if (contactForm && contactFeedback) {
+if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-
         const name = document.getElementById("contactName").value.trim();
         const email = document.getElementById("contactEmail").value.trim();
         const message = document.getElementById("contactMessage").value.trim();
 
-        contactFeedback.className = "form-feedback";
+        const contactFeedback = document.getElementById("contactFeedback");
 
         if (!name || !email || !message) {
-            contactFeedback.textContent =
-                "Please complete all fields before continuing.";
-            contactFeedback.classList.add("error");
+            event.preventDefault();
+
+            if (contactFeedback) {
+                contactFeedback.textContent =
+                    "Please complete all fields before sending.";
+                contactFeedback.className = "form-feedback error";
+            }
+
             return;
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email)) {
-            contactFeedback.textContent =
-                "Please enter a valid email address.";
-            contactFeedback.classList.add("error");
+            event.preventDefault();
+
+            if (contactFeedback) {
+                contactFeedback.textContent =
+                    "Please enter a valid email address.";
+                contactFeedback.className = "form-feedback error";
+            }
+
             return;
         }
 
-        contactFeedback.textContent =
-            "Validation successful! This demo does not send or store your message.";
-        contactFeedback.classList.add("success");
+        // Allow the valid form to submit to FormSubmit.
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
     });
 }
