@@ -456,10 +456,15 @@ h3 {
 }
 
 .section-intro {
-    max-width: 340px;
+    width: 100%;
+    max-width: 420px;
     margin: 0;
+    flex: 1;
     color: var(--muted);
     font-size: 0.95rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 /* ==============================
@@ -1442,6 +1447,8 @@ h3 {
     color: #687468;
     font-size: 13px;
     line-height: 1.7;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 900px) {
@@ -1551,16 +1558,20 @@ h3 {
     color: #243047;
     margin: 0;
 }
-
 /* Mobile Responsive */
-@media (max-width: 768px) {
-    #about {
-        padding: 55px 0;
+@media (max-width: 760px) {
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
     }
 
-    #about .about-points {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .section-intro {
+        max-width: 100%;
+    }
+
+    .certificates-note {
+        max-width: 100%;
     }
 }
 /* Match About section background with Projects and Certifications */
@@ -1589,4 +1600,62 @@ h3 {
 
 .form-feedback.error {
     color: #c0392b;
+}
+/* Responsive contact form button */
+.contact-form button[type="submit"] {
+    display: inline-block;
+    max-width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .contact-form button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
+/* Keep About points inside their section */
+.about-points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.about-point {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.about-point h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+    line-height: 1.4;
+}
+
+.about-point span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+    .about-points {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
