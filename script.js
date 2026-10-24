@@ -88,7 +88,7 @@ if (contactForm) {
             feedback.className = "form-feedback success";
         }
 
-        contactForm.reset();
+        
 
         if (submitButton) {
             submitButton.disabled = false;

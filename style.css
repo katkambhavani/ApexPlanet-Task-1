@@ -1659,3 +1659,24 @@ h3 {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+/* Crop Recommendation System dashboard image */
+.crop-dashboard-preview {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f4f7f2;
+}
+
+.crop-dashboard-preview img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .crop-dashboard-preview img {
+        height: 220px;
+    }
+}
