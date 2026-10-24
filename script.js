@@ -52,48 +52,47 @@ if (currentYear) {
 ============================== */
 
 
+
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
         const name = document.getElementById("contactName").value.trim();
         const email = document.getElementById("contactEmail").value.trim();
         const message = document.getElementById("contactMessage").value.trim();
-
-        const contactFeedback = document.getElementById("contactFeedback");
+        const feedback = document.getElementById("contactFeedback");
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
 
         if (!name || !email || !message) {
-            event.preventDefault();
-
-            if (contactFeedback) {
-                contactFeedback.textContent =
-                    "Please complete all fields before sending.";
-                contactFeedback.className = "form-feedback error";
+            if (feedback) {
+                feedback.textContent = "Please fill in all fields.";
+                feedback.className = "form-feedback error";
             }
-
             return;
         }
 
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-            event.preventDefault();
-
-            if (contactFeedback) {
-                contactFeedback.textContent =
-                    "Please enter a valid email address.";
-                contactFeedback.className = "form-feedback error";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            if (feedback) {
+                feedback.textContent = "Please enter a valid email address.";
+                feedback.className = "form-feedback error";
             }
-
             return;
         }
 
-        // Allow the valid form to submit to FormSubmit.
-        const submitButton = contactForm.querySelector('button[type="submit"]');
+        if (feedback) {
+            feedback.textContent = "Message sent successfully! Thank you for contacting me.";
+            feedback.className = "form-feedback success";
+        }
+
+        contactForm.reset();
 
         if (submitButton) {
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Send Message <span>↗</span>';
         }
     });
 }

@@ -114,6 +114,11 @@
                     new technologies, and learning through practical
                     experience.
                 </p>
+                <p>
+                
+                    I value curiosity, consistency, and continuous improvement. My goal is to grow into a skilled software professional by applying my knowledge to real-world challenges, learning from practical experience, and contributing to meaningful projects .
+                    </p>
+                </p>
             </div>
 
             <div class="about-points">
@@ -567,6 +572,7 @@ Continuing to learn, earn certifications, and develop new skills.
                 </div>
 
 
+
 <form class="contact-form" id="contactForm"
     action="https://formsubmit.co/katkambhavani78@gmail.com"
     method="POST">
@@ -574,9 +580,9 @@ Continuing to learn, earn certifications, and develop new skills.
     <h3>Send a message</h3>
 
     <p class="form-note">
-        Send me a message directly through this form.
-    </p>
+send me a message directly through this form    </p>
 
+    <!-- Email settings -->
     <input type="hidden" name="_subject"
         value="New message from your portfolio">
 
@@ -584,25 +590,56 @@ Continuing to learn, earn certifications, and develop new skills.
 
     <!-- Spam protection -->
     <input type="text" name="_honey"
-        style="display:none" tabindex="-1" autocomplete="off">
+        style="display:none"
+        tabindex="-1"
+        autocomplete="off">
 
+    <!-- Name -->
     <label for="contactName">Your name</label>
-    <input id="contactName" name="name" type="text"
-        placeholder="Enter your name" required>
+    <input
+        id="contactName"
+        name="name"
+        type="text"
+        placeholder="Enter your name"
+        maxlength="100"
+        required
+    >
 
+    <!-- Email -->
     <label for="contactEmail">Email address</label>
-    <input id="contactEmail" name="email" type="email"
-        placeholder="you@example.com" required>
+    <input
+        id="contactEmail"
+        name="email"
+        type="email"
+        placeholder="you@example.com"
+        maxlength="254"
+        required
+    >
 
+    <!-- Message -->
     <label for="contactMessage">Message</label>
-    <textarea id="contactMessage" name="message" rows="4"
-        placeholder="Write your message..." required></textarea>
+    <textarea
+        id="contactMessage"
+        name="message"
+        rows="4"
+        placeholder="Write your message..."
+        maxlength="5000"
+        required
+    ></textarea>
 
+    <!-- Feedback -->
+    <p id="contactFeedback"
+        class="form-feedback"
+        role="status"
+        aria-live="polite"></p>
+
+    <!-- Submit -->
     <button class="button button-primary" type="submit">
         Send Message <span>↗</span>
     </button>
 
 </form>
+
             </div>
         </section>
     </main>

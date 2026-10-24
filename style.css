@@ -1577,3 +1577,16 @@ h3 {
 #about .about-point span {
     color: var(--green);
 }
+
+.form-feedback {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.form-feedback.success {
+    color: #2d7a46;
+}
+
+.form-feedback.error {
+    color: #c0392b;
+}
